@@ -1,0 +1,9 @@
+[package]
+name = "constraint-theory-llvm"
+version = "0.1.0"
+edition = "2021"
+description = "LLVM backend for constraint-theory-core — compile CDCL traces to AVX-512"
+repository = "https://github.com/SuperInstance/constraint-theory-llvm"
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"] }
