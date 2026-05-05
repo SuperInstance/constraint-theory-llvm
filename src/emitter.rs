@@ -34,6 +34,7 @@ impl Default for EmitterConfig {
 
 /// LLVM IR emitter for CDCL traces
 pub struct LLVMEmitter {
+    #[allow(dead_code)]
     config: EmitterConfig,
 }
 
