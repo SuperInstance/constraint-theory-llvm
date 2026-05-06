@@ -35,3 +35,6 @@ pub use trace::{CDCLTrace, TraceEvent, Decision, Propagation, Conflict, Backtrac
 pub use emitter::{LLVMEmitter, EmitterConfig, OptimizationLevel};
 pub use optimizer::AVX512Optimizer;
 pub mod analog_compute;
+pub mod emitter_x86;
+
+pub use emitter_x86::{CompiledConstraints, CheckFn, BloomFn, BatchFn, build_check_constraints, build_bloom_check, build_batch_check_all};
