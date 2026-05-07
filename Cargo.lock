@@ -31,7 +31,7 @@ dependencies = [
 
 [[package]]
 name = "constraint-theory-llvm"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "cranelift-codegen",
  "cranelift-module",

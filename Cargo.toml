@@ -1,9 +1,14 @@
 [package]
 name = "constraint-theory-llvm"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2021"
-description = "LLVM backend for constraint-theory-core — compile CDCL traces to AVX-512"
+description = "LLVM backend for constraint theory — CDCL → LLVM IR → AVX-512 with direct x86-64 emission"
 repository = "https://github.com/SuperInstance/constraint-theory-llvm"
+license = "Apache-2.0"
+authors = ["SuperInstance <forgemaster@superinstance.com>"]
+keywords = ["constraint", "llvm", "avx-512", "safety-critical", "cdcl"]
+categories = ["algorithms", "hardware-support", "science"]
+readme = "README.md"
 
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
