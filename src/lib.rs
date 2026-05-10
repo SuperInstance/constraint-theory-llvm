@@ -39,5 +39,6 @@ pub mod emitter_x86;
 pub mod ttl_constraint;
 pub mod mythos_mesh;
 pub mod mythos_emitter;
+pub mod plato_mythos_kernel;
 
 pub use emitter_x86::{CompiledConstraints, CheckFn, BloomFn, BatchFn, build_check_constraints, build_bloom_check, build_batch_check_all};
