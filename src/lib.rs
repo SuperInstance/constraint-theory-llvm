@@ -39,6 +39,9 @@ pub mod emitter_x86;
 pub mod ttl_constraint;
 pub mod mythos_mesh;
 pub mod mythos_emitter;
+
+#[cfg(target_arch = "aarch64")]
+pub mod mythos_emitter_neon;
 pub mod plato_mythos_kernel;
 pub mod universal_isa;
 
