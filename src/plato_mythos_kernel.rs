@@ -112,7 +112,7 @@ impl PlatoTile {
         let threshold = match self.priority() {
             0 => 0.99, 1 => 0.80, _ => 0.50,
         };
-        self.confidence() >= threshold
+        self.confidence() >= threshold - 0.005
     }
 
     /// Optimization 3: Combined flags check — alive AND passed deadband (one bitmask test).
