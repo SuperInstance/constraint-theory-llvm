@@ -42,7 +42,7 @@
 //! Same INT8 saturation guarantees. Same zero-mismatch philosophy.
 //! From GPU to batten. From boot to death.
 
-use std::time::Instant;
+use crate::arm_timing::ArmInstant;
 
 
 
@@ -200,7 +200,7 @@ pub struct TtlConstraint {
     /// TTL metadata
     pub ttl_type: TtlType,
     pub base_lifespan: f64,
-    pub created: Instant,
+    pub created: ArmInstant,
     pub use_count: u64,
 
     /// Current state
@@ -225,7 +225,7 @@ impl TtlConstraint {
             upper_bounds,
             ttl_type,
             base_lifespan: base,
-            created: Instant::now(),
+            created: ArmInstant::now(),
             use_count: 0,
             state: if base <= 0.0 {
                 ConstraintState::Expired {
@@ -579,7 +579,7 @@ impl H1Cohomology {
                 new_betti,
                 delta: new_betti - self.prev_betti,
                 expiry_count: expired_count,
-                timestamp: Instant::now(),
+                timestamp: ArmInstant::now(),
             });
 
             // Mark expired constraints as emerged
@@ -624,7 +624,7 @@ pub struct EmergenceEvent {
     pub new_betti: i64,
     pub delta: i64,
     pub expiry_count: u64,
-    pub timestamp: Instant,
+    pub timestamp: ArmInstant,
 }
 
 // ── Doubles as a CDCL Trace Event ──────────────────────────
