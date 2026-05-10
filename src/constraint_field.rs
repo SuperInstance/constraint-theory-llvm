@@ -304,6 +304,11 @@ impl ConstraintField {
     ///
     /// A topology change means the number of local minima in the field has changed.
     /// This is the CONTINUOUS equivalent of β₁ changing in H1 cohomology.
+    /// Number of nails currently in the field.
+    pub fn nail_count(&self) -> usize {
+        self.nails.len()
+    }
+
     pub fn field_topology(&self, now: u64) -> usize {
         // Sample the field at regular intervals and count local minima
         let samples = 100;
