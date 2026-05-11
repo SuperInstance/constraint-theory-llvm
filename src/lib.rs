@@ -34,7 +34,18 @@ mod optimizer;
 pub use trace::{CDCLTrace, TraceEvent, Decision, Propagation, Conflict, Backtrack};
 pub use emitter::{LLVMEmitter, EmitterConfig, OptimizationLevel};
 pub use optimizer::AVX512Optimizer;
+pub mod arm_timing;
+pub mod constraint_field;
+pub mod field_emitter;
 pub mod analog_compute;
 pub mod emitter_x86;
+pub mod ttl_constraint;
+pub mod mythos_mesh;
+pub mod mythos_emitter;
+
+#[cfg(target_arch = "aarch64")]
+pub mod mythos_emitter_neon;
+pub mod plato_mythos_kernel;
+pub mod universal_isa;
 
 pub use emitter_x86::{CompiledConstraints, CheckFn, BloomFn, BatchFn, build_check_constraints, build_bloom_check, build_batch_check_all};
