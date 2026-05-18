@@ -1,5 +1,7 @@
 # constraint-theory-llvm
 
+
+![CI](https://github.com/SuperInstance/constraint-theory-llvm/actions/workflows/ci.yml/badge.svg)
 **LLVM backend for constraint theory** — compiles CDCL SAT traces to LLVM IR, then to AVX-512 machine code with direct x86-64 emission.
 
 Part of the [FLUX-LUCID](https://github.com/SuperInstance) constraint theory ecosystem.
